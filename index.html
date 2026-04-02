@@ -897,11 +897,11 @@ body:hover .cursor { opacity:1; }
 <div class="bottom-bar">
   <span>📍 Near ITI, Madhotal, Jabalpur</span>
   <span>📞 9755042292, 9755042293</span>
-  <span>✉ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="41282f272e013233283526332e34316f2f2435">[email&#160;protected]</a></span>
+  <span>✉ info@sritgroup.net</span>
   <span>🌐 www.sritgroup.net</span>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // ── Custom Cursor ──
 const cursor = document.getElementById('cursor');
 const ring = document.getElementById('cursorRing');
@@ -962,4 +962,12 @@ function toggleRule(header){
   const body = item.querySelector('.rule-body');
   const isOpen = item.classList.contains('open');
   // close all
-  document.querySelectorA
+  document.querySelectorAll('.rule-item').forEach(i=>{
+    i.classList.remove('open');
+    i.querySelector('.rule-body').classList.remove('open');
+  });
+  if(!isOpen){ item.classList.add('open'); body.classList.add('open'); }
+}
+</script>
+</body>
+</html>
